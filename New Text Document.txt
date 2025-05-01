@@ -1,0 +1,47 @@
+FSMO Rules ka matlab hai **Flexible Single Master Operations**. Ye Active Directory (AD) ka aik important hissa hain jo Windows Server environments mein use hota hai. Ye kuch specific roles hotay hain jo sirf ek hi Domain Controller (DC) par honay chahiye system ke theek tarike se kaam karne ke liye.
+
+Chalo isay Urdu mein asaan lafzon mein samajhtay hain:
+
+---
+
+### **FSMO ke 5 Roles (Zimmedariyan):**
+
+FSMO roles do categories mein divide hotay hain:
+
+#### **1. Forest Level Roles (2 roles):**
+Ye poori Forest (poora AD environment) par apply hotay hain.
+
+1. **Schema Master**  
+   - Ye role schema (yani AD ka design/structure) ko manage karta hai.  
+   - Sirf aik hi Schema Master hota hai puray forest mein.  
+
+2. **Domain Naming Master**  
+   - Naye domains bananay ya delete karne ka kaam karta hai.  
+   - Ye bhi sirf aik hota hai poori forest mein.  
+
+#### **2. Domain Level Roles (3 roles):**
+Ye har domain ke andar hotay hain.
+
+3. **RID Master**  
+   - Har user/computer ko aik unique ID deta hai.  
+   - Domain ke andar sirf aik hota hai.  
+
+4. **PDC Emulator**  
+   - Ye time synchronization, password changes, aur backward compatibility (Windows NT jaise purane systems ke liye) ka kaam karta hai.  
+   - Ye role authentication mein bhi important hota hai.  
+
+5. **Infrastructure Master**  
+   - Agar multiple domains hain to ye ensure karta hai ke references theek tarah update hoon.  
+   - Cross-domain references ko manage karta hai.  
+
+---
+
+### **Kyun Zaroori Hain FSMO Roles?**
+
+Agar ye roles kisi wajah se unavailable ho jaayein (jaise server crash ho jaye), to kuch important functions ruk jaate hain — jaise naya user banana, password change hona, ya naye domain ka add hona.
+
+---
+
+Agar chaho to mein ye bhi bata sakta hoon ke har role ko kaise check karein aur transfer/move kaise karein.
+
+Chahte ho isay table format mein ya kisi specific example ke sath samjhaun?

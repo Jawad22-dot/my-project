@@ -1,0 +1,118 @@
+How to boot usb
+step=1 Attach usb
+step=2 open cmd(run admistrator)
+1 diskpart 	cmd me aik tool hy cmd diskpart me enter ho jata hy ager hum hum ? qstn mark laga lay to bohat kuch sakty hy gpt mbr sub kuch karsakty hy 
+2 list disk jo machine hy isky ky sath kitna storage device connect hy 
+3 select disk1 jo usb hoga wahi disk select karengy
+3 clean usb device ko clean kary
+4 create partiton primary 
+5 active 
+6 format fs=ntfs quick
+7 assign drive letter assign karo
+8 exit
+
+
+xcopy i:\*.* /s/e/f d:\
+*.* (copy all type of files) .exe, jpg, .mp4  
+/s (copy sub-folders)
+/e (copy empty-folder)
+/f (show copy status)
+d: (destination ) USB
+
+
+Disk two types 1 Basic 2 Dynamic
+Basic:
+primary , extended partition
+o/s		logical partition data
+MBR (partition Table)
+64bytes
+
+
+shift f10 jab hum window karty hy to disk kilye hum cmd ki zery ey karty hy for cmd appear
+type : diskpart
+list disk disk show hog
+select disk 0
+create partition primary size=33000 (primary partition ban jayega jitna disk hy utna partition banyega likn hum nahe chahty ki jitna hy utn bnay
+create partition extended
+list partition
+select partition 0
+create partiton logical size=15000
+hum mbr me 4 partiton ban sakty hy ager zayda karna ho to extended kar sakty hy likn gpt per
+list volume cmd command hy
+0
+1     formated nahe hum is me data nahe rakskty
+lus
+2
+3
+4
+5
+
+formate ki lye
+select volume 1
+assign letter c
+format fs=ntfs quick
+check list volume
+after that hum sab is tara format karengy
+exit
+
+
+how to enable adminstrator account:
+run: lusrmgr.msc local user and groups
+using cmd command we can do
+net user
+
+net user administrator /active:yes
+
+net user administrator pwd
+net user adminstrator * if we change the pwd
+if we disable admistrator acnt we write
+net user adminstrotr /active:no
+ 
+
+creat of standard user accounts:
+
+use cmd:
+net user ap ki pass kitny user hy
+net user gul /add  user create hogya
+net user gul 123 for pwd
+net user gul /del 
+
+Account lockout Policy:
+
+by default disable hota hy
+ager ap kary ki 3 login attempts kary to 1 hr ki acnt lock hojae
+run cmd secpol.msc 
+account policy
+click account lock policy
+
+account lockout threshold set for 30 min or jo bi ho reset time
+
+
+Network managment policy related ye topic hy
+AUDIT POLICY	
+ager hym check kary ki koe login ly ya kis logout li
+
+user Rights assigment 
+if someone change the time of sysytem
+
+
+SECURITY OPTION:::
+
+multiple security hum karsakty hy u can check the folder
+
+Disk managment::
+
+QOuta ::
+specific memory allocated from administrator
+ 
+topic related to storage technology	
+Basic vs dynamic disk
+
+dynamic disk:
+
+
+
+
+
+
+

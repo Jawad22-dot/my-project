@@ -1,0 +1,64 @@
+ip address static karna ho configuartion mange me jaye  iov4 configuration me jayey gy
+space button mark keylye use hota hy use dunamic use static pi jaye gy awer space select karygy
+
+
+step1= virtual machiene pi click karey
+create vm 
+crenate new vm ovf aik template hy like snap shot esxi pi hum ager dosra esxi run kary 
+dosry hypervisor ki vm ko copy karytty hy
+
+vm humary pass aik file hy save hoty hy
+
+3 interface of esxi dcui ,vm ware host client,vsphere
+
+creat name of vm
+select guest
+select guest versiion
+select vm store jo apny hard disk select kia hy
+virtual hardware
+is me additional hard disk ager attach karna ho 
+hot word power on kil iye use hota hy
+incase aher mujy cpu barrhany kiu zarurat parrhy to hum hot power on ko check karena hoga 
+cpu me humary pass 3 option hy
+reservation  limit share
+limit ko hum maximum capcity ko kihty hy 
+resource asign karny ki bad is ko ap is ki limit kary sakty hy
+Resrvstion vm b aik sensitve appliction run karaha 600mhz hum iskily resver karengy 
+Shares : priorty dainy ki liye hum shares use karty hy sub sy pihyly vm b ko dejaye vm c ko de jaye and after vma a ko dejey
+next 
+cpu 
+me hum memory hot check karengy
+hard disk apny behalf py dengy
+thin provisioned aik hardware hy jis ki capcity 100gb hy to aik vm hy iski chehye 50 gb ager vm 10 gb use karenga to hardware sy serf 10gb minus hoga to isko thin provisioned kihlata hy
+jo resource vm use kargea to utna hardawre sy remove hogy isko thin provisioned kihty hy
+
+
+thick provisioned, lazily zeroed jitna ap assign karegy utna minus hoga hardawre sy remove hoga
+
+
+lazily zeroed wait karega data jab aata hy to 10 gb ko jab daiky ga to extra space 0000 hojata hy
+
+eagerly zeroed is me wait nahi karty direct data 0000 per jata hy
+
+
+
+step 3 = network adapter select karengy 
+3 types of adapter 
+E1000e speed 1GBbps hoga transfer karga 
+vmxnet3  speed 10gbs hoga vmware tool ki baghir kaam nahi karta isko install karana hog
+SR-IOV passthrough just like bridge ye direct phiscal hardware ki sath connect hota sary layer ko bypass karty hoe 
+
+step 4= iso attach karna 
+host device 
+datastore 100 gb hy osy sy hum attach karengy
+next finsh 
+
+
+Data store me hum data upload karty hy
+
+storage
+upload 
+any u want to upload 
+
+Action me hum editing karsakty hy
+ 

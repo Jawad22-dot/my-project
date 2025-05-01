@@ -1,0 +1,9 @@
+1:Install DNS Server
+2:Root Hints configuration
+3:DNS Forwarder configuration
+4:DNS Cache configuration
+5:Creation of Forward LookupZone
+6:Creation of Reverse Lookup Zone
+7:A-record and pointer record
+8:Alias Record and MX Record
+9:DNS Polices
